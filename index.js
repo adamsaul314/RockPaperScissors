@@ -10,8 +10,6 @@ function getComputerChoice () {
         return 'Paper'
     } else {
         return 'Scissors'
-    }
-
 }
 
 console.log(getComputerChoice())
