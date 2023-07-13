@@ -1,4 +1,5 @@
 let playerSelection = prompt('Choose rock, paper or scissors: ');
+playerSelection = playerSelection.toLowerCase();
 
 let computerSelection = getComputerChoice();
 
@@ -20,33 +21,35 @@ function getComputerChoice () {
 function playRound(playerSelection, computerSelection) {
 
 
-    if (playerSelection == 'Rock' && computerSelection == 'Paper'){
+    if (playerSelection == 'rock' && computerSelection == 'Paper'){
         console.log('You lose! Paper beats rock.')
 
-    } else if (playerSelection == 'Rock' && computerSelection == 'Scissors'){
+    } else if (playerSelection == 'rock' && computerSelection == 'Scissors'){
         console.log('You win! Rock beats scissors.')
 
-    } else if (playerSelection == 'Rock' && computerSelection == 'Rock'){
+    } else if (playerSelection == 'rock' && computerSelection == 'Rock'){
         console.log('Tie! Play again.')
 
-    } else if (playerSelection == 'Paper' && computerSelection == 'Paper'){
+    } else if (playerSelection == 'paper' && computerSelection == 'Paper'){
         console.log('Tie! Play again.')
 
-    } else if (playerSelection == 'Paper' && computerSelection == 'Scissors'){
+    } else if (playerSelection == 'paper' && computerSelection == 'Scissors'){
         console.log('You Lose! Scissors beats paper.')
 
-    } else if (playerSelection == 'Paper' && computerSelection == 'Rock') {
+    } else if (playerSelection == 'paper' && computerSelection == 'Rock') {
         console.log('You Win! Paper beats rock.')
 
-    } else if (playerSelection == 'Scissors' && computerSelection == 'Paper'){
+    } else if (playerSelection == 'scissors' && computerSelection == 'Paper'){
         console.log('You Win! Scissors beats paper.')
 
-    }else if (playerSelection == 'Scissors' && computerSelection == 'Scissors'){
+    }else if (playerSelection == 'scissors' && computerSelection == 'Scissors'){
         console.log('Tie! Play again.')
 
-    } else if (playerSelection == 'Scissors' && computerSelection == 'Rock'){
+    } else if (playerSelection == 'scissors' && computerSelection == 'Rock'){
         console.log('You Lose! Rock beats scissors.')
     }
+
+    return computerSelection, playerSelection;
 
 }
 
