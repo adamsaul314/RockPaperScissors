@@ -53,6 +53,21 @@ function playRound(playerSelection, computerSelection) {
 
 }
 
-console.log(computerSelection)
+function game() {
 
-console.log(playRound(playerSelection, computerSelection))
+    console.log(computerSelection)
+
+        playRound(playerSelection, computerSelection);
+        playRound(playerSelection, computerSelection);
+        playRound(playerSelection, computerSelection);
+        playRound(playerSelection, computerSelection);
+        playRound(playerSelection, computerSelection);
+
+    
+
+}
+
+game();
+// console.log(computerSelection)
+
+// console.log(playRound(playerSelection, computerSelection))
