@@ -13,7 +13,7 @@ function getComputerChoice(){
         computerChoice='Scissors'
     }
 
-    console.log(computerChoice);
+    console.log(computerChoice); //remove 
 
 
 }
