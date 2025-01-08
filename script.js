@@ -18,3 +18,26 @@ function getComputerChoice(){
 
 }
 
+
+let userSelection = prompt('Choose Rock, Paper or Scissors').toLowerCase();
+
+function getHumanChoice(userSelection){
+
+    if (userSelection == 'rock'){
+        return userSelection
+    }
+    if (userSelection == 'paper'){
+        return userSelection
+    }
+    if(userSelection == 'scissors'){
+        return userSelection
+    }
+    else{
+        return 'Invalid choice! You must chose rock, paper or scissors'
+    }
+
+}
+
+console.log(getHumanChoice(userSelection))
+
+
