@@ -1,6 +1,6 @@
 let humanScore = 0
 let computerScore = 0
-
+let userSelection
 function getComputerChoice(){
 
     let computerChoice;
@@ -64,16 +64,44 @@ function playRound(humanChoice, computerChoice) {
 
   }
 
-  let userSelection = prompt('Choose Rock, Paper or Scissors').toLowerCase();
-  const humanSelection = getHumanChoice(userSelection);
-  const computerSelection = getComputerChoice();
-  
-  console.log("Your choice:", humanSelection);
-  console.log("Computer's choice:", computerSelection);
-  console.log(playRound(humanSelection, computerSelection))
 
-  console.log(`Score: You - ${humanScore}, Computer - ${computerScore}`);
-  
+
+  function updateScore(result) {
+    const resultDisplay = document.getElementById("result");
+    const scoreDisplay = document.getElementById("score");
+
+    resultDisplay.textContent = result;
+    scoreDisplay.textContent = `Score: You - ${humanScore}, Computer - ${computerScore}`;
+}
+
+function updateDisplay(result, computerChoice) {
+    const resultDisplay = document.getElementById("result");
+    const computerChoiceDisplay = document.getElementById("computer-choice");
+    const scoreDisplay = document.getElementById("score");
+
+    resultDisplay.textContent = result;
+    computerChoiceDisplay.textContent = `Computer's Choice: ${computerChoice}`;
+    scoreDisplay.textContent = `Score: You - ${humanScore}, Computer - ${computerScore}`;
+}
+
+// Add event listeners to buttons
+document.getElementById("rock").addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    const result = playRound("rock", computerChoice);
+    updateDisplay(result, computerChoice);
+});
+
+document.getElementById("paper").addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    const result = playRound("paper", computerChoice);
+    updateDisplay(result, computerChoice);
+});
+
+document.getElementById("scissors").addEventListener("click", () => {
+    const computerChoice = getComputerChoice();
+    const result = playRound("scissors", computerChoice);
+    updateDisplay(result, computerChoice);
+});
 
 
 
